@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ludo.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: floralwhite;">Ludo</h1>
+        <div><h2 style="color: aliceblue;" id="result"></h2></div>
+      <div class="dice">
+          <p><h1 style="color: crimson;" class="pp">Player 1</h1></p>
+          <img src="ludoimg/ludo5.png" alt="" id="p1">
+         </div>
+          <div class="dice">
+              <p><h1 style="color: crimson;" class="pp">Player 2</h1></p>
+              <img src="ludoimg/ludo2.png" alt="" id="p2">
+
+          </div>
+          <div>
+              <button class="btn" onclick="play()">Play</button>
+          </div>
+
+      </div>
+    </div>
+<script>
+    function play(){
+  let Play1=Math.floor(Math.random()*6)+1;
+  let p=`ludoimg/ludo${Play1}.png`
+
+ document.getElementById('p1').setAttribute('src',p);
+
+ let Play2=Math.floor(Math.random()*6)+1;
+  let p2=`ludoimg/ludo${Play2}.png`
+  document.getElementById('p2').setAttribute('src',p2);
+  if(Play1>Play2)
+  {
+      document.getElementById('result').innerHTML="Player 1 is winner";
+  }
+  else if(Play2>Play1)
+  {
+    document.getElementById('result').innerHTML="Player 2 is winner";
+
+  }
+  else
+  document.getElementById('result').innerHTML="Opps Match Draw ";
+
+
+    }
+</script>
+    
+</body>
+</html>

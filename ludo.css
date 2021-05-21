@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+   width: 70%;
+   padding: auto;
+   margin: auto;
+   text-align: center;
+
+}
+.dice
+{ 
+    text-align: center;
+    display: inline-block;
+
+}
+body{
+    background-color: black;
+}
+#pp{
+
+    font-size: large;
+    color: crimson;
+    
+}
+image{
+    
+}
+.btn{
+    width: 20%;
+    padding: 20px;
+    color: crimson;}
